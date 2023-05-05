@@ -7,24 +7,12 @@ public class Q12 {
         Integer count=0;Integer sum=0;
 
 
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {//{3,-1,4,5,3,-9,8,2}
             sum=array[i];
-            if(sum==k)
-            {
-                count++;
-            }
-            for (int j = i+1; j < array.length; j++) {
-                sum=array[i];
-                sum+=array[j];
-                if(sum==k)
+            for (int j = i+1; j <array.length ; j++) {
+                if(sum + array[j]==k)
                 {
                     count++;
-                }
-                for (int l = j+1; l < array.length; l++) {
-                    if((sum+array[l]) == k)
-                    {
-                        count++;
-                    }
                 }
             }
         }
